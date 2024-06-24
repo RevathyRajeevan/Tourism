@@ -1,11 +1,11 @@
-import { CommonModule, DatePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,DatePipe],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
 })
@@ -29,14 +29,7 @@ export class SignUpComponent {
   }
 
 
-  formattedDate:string|null=''
-    constructor(private datePipe: DatePipe) {
-    }
-    onChangeDate(event: any) {
-      const inputDate = event.target.value
-      this.formattedDate = this.datePipe.transform(inputDate, 'MMMM dd yy');
-  }
-
+  
   
     
 }
