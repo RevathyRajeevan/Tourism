@@ -1,16 +1,16 @@
 .carousel-item{
-    height: 800px;
+    height: 500px;
     width:100%;
 }
 .carousel-caption{
-    h1{
+    h5{
         opacity:0.8;
     }
 }
 .more{
     padding: 10px;
     h1{
-        font-size: 50px;
+        font-size: 20px;
         color:#14a800;
     }
     h1:hover{
@@ -34,8 +34,8 @@
   }
   .keralaCard {
     position: relative;
-    min-width: 600px;
-    min-height: 500px;
+    min-width: 370px;
+    min-height: 200px;
     margin: 20px;
     overflow: hidden;
   }
@@ -62,10 +62,10 @@
     transition: transform 0.5s ease-in-out;
   }
   .cardTitle{
-    font-size: 50px;
+    font-size: 25px;
   }
   .cardText{
-    font-size: 25px;
+    font-size: 15px;
   }
 
   .cardTitle, .cardText {

@@ -3,8 +3,8 @@
     margin-left: 50px;
 }
 .detailDescription{
-    font-size: 25px;
-    padding:40px;
+    font-size: 18px;
+    padding:30px;
 }
 
 
@@ -13,7 +13,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height:600px;
+    height:350px;
     width:90%;
     cursor: pointer;
     margin:20px;
@@ -29,15 +29,13 @@
     display:flex;
     flex-direction: column;
 }
-.placeIntro h1{
-    font-size: 45px;
-}
+
 .placeIntro p{
-    font-size: 32px;
+    font-size: 20px;
 }
 .placeImg img{
-    height:500px;
-    width:700px;
+    height:300px;
+    width:400px;
     transition: transform 0.3s ease;
 }
 
