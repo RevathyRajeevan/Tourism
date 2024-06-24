@@ -1,0 +1,64 @@
+
+<div class="container">
+    <div class="wrapper">
+        <form [formGroup]="signupform" (ngSubmit)="signup()">
+        <h2>Sign-Up</h2>
+        <div class="input-field">
+            <input type="text"  formControlName="username"  required>
+            <label>Enter your  name</label>
+            <div *ngIf="signupform.controls['username'].errors?.['required']" style="color:red;">
+                This is a required field
+              </div>
+            </div>
+        <div class="input-field">
+        <input type="email"  formControlName="email"  required>
+        <label>Enter your  email</label>
+        <div *ngIf="signupform.controls['email'].errors?.['required']" style="color:red;">
+            This is a required field
+          </div>
+          
+        </div>
+       
+        <div class="input-field">
+        <input type="password" formControlName="password"  required>
+        <label>Enter your password</label>
+        <div *ngIf="signupform.controls['password'].errors?.['required']" style="color:red;">
+            This is a required field
+          </div>
+          <div *ngIf="signupform.controls['password'].errors?.['minlength']" style="color:red;">
+            Minimum 4 letters required
+          </div>
+        </div>
+        <div class="input-field">
+        <input type="password" formControlName="password"  required>
+        <label>Re-enter your password</label>
+        </div>
+  
+        <div class="input-field">
+ 
+            <input type="text" formControlName="phone"  required> 
+            <label>Phone number</label>
+           </div>
+           <div class="d-flex" style="justify-content: flex-start;">
+           <p style="left:0;color:white;font-size: 16px;margin-bottom: 0;">DOB</p>
+          </div>
+           <div class="input-field">
+            <input type="date" formControlName="dob"  required> 
+            <label class="text-light" (change)="onChangeDate($event)" for="others"></label>
+           </div>
+           
+           <div class="options">
+            <label>Gender</label>
+            <input type="radio" id="male" formControlName="gender" value="HTML" >
+             <label for="male">Male</label><br>
+             <input type="radio" id="female" formControlName="gender" value="CSS" >
+             <label for="female">Female</label><br>
+             <input type="radio" id="others" formControlName="gender" value="JavaScript" >
+             <label for="others">Others</label>
+            </div>
+        
+        <button type="submit" [disabled]="signupform.invalid" value="SignUp">Sign Up</button>
+        
+        </form>
+        </div>
+    </div>

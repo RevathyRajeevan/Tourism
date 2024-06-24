@@ -1,0 +1,24 @@
+
+<div class="districtList">
+  <div class="d-flex justify-content-center align-items-center p-5">
+    <input [(ngModel)]="toFilter" type="text" placeholder="Search District" style="width:400px;height:70px;border-radius:2;">
+  </div>
+    
+    <div class="row">
+      @for(item of district|filter:toFilter; track item.name) {
+        
+        <div class="col-md-4"> 
+            
+          <div class="card text-bg-dark" (click)="viewDistrictDetails(item.id)" style="margin: 30px;">
+            <img src="{{ item.images }}" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+       
+      }
+    </div>
+    
+  </div>

@@ -1,0 +1,46 @@
+.card-title{
+    font-size: 50px;
+}
+.card-text{
+    font-size: 25px;
+}
+
+.card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden; 
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+.card .card-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translateY(100%);
+    transition: transform 0.3s ease; 
+}
+
+.card:hover .card-img-overlay {
+    transform: translateY(0);
+}
+
+.card .card-title, .card .card-text {
+    color: white; 
+    margin: 10px; 
+    transition: opacity 0.3s ease; 
+}
+
+.card:hover .card-title, .card:hover .card-text {
+    opacity: 1; 
+}
+
+
+.districtList{
+    background-color: #f2f7f2;
+}

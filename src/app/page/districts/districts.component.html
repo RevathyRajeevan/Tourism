@@ -1,0 +1,19 @@
+
+    <h1 style="font-size: 60px;text-align: center;">{{district.name}}</h1>
+    <h4 style="font-size: 30px;text-align: center;padding:20px;">{{district.description}}</h4>
+    <p class="detailDescription">{{district.detail_description}}</p>
+   
+     <p style="font-size: 35px;padding:10px;margin-left: 40px;font-weight: bold;color:#117903;">Top destinations in {{district.name}}</p>
+     <div class="container-fluid">
+      @for(item of district.places_to_visit; track item.name){
+    <div appHover class="explore">
+        <div class="placeIntro">
+            <h1>{{item.name}}</h1>
+            <p>{{item.description}}</p>
+        </div>
+        <div class="placeImg">
+            <img src="{{item.images}}">
+        </div>
+    </div>
+}
+</div>
